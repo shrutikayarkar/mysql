@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="well">
+		<h3 class="text-center">
+			View Category
+		</h3>
+	</div>
+	<table class="table table-bordered table-stripped">
+		<tr>
+			<th>S.no</th>
+			<th>Category Name</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+		<%data.forEach(function(x,i){%>
+		<tr>
+			<td><%=i+1%></td>
+			<td><%=x.category%></td>
+			<td><a href="/view/edit/<%=x.id%>" class="btn btn-primary">Edit</a> </td>
+			<td><a href="/view/delete/<%=x.id%>" class="btn btn-danger">Delete</a> </td>
+		</tr>
+	<%})%>
+	</table>
+</div>
